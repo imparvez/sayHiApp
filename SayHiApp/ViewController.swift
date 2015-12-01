@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var messageLabel: UILabel!
+    @IBOutlet var nameField: UITextField!
+    
+    @IBAction func buttonPressed(sender: UIButton) {
+        let nameEntered = nameField.text!
+        messageLabel.text = "Hi There \(nameEntered)"
+        nameField.text = ""
+        nameField.resignFirstResponder()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
